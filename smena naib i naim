@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function swapMinMax(array) {
+            var minIndex = array.indexOf(Math.min(...array));
+            var maxIndex = array.indexOf(Math.max(...array));
+
+            var swappedArray = [...array];
+
+            [swappedArray[minIndex], swappedArray[maxIndex]] = [swappedArray[maxIndex], swappedArray[minIndex]];
+
+            var resultParagraph = document.createElement('p');
+            resultParagraph.textContent = `Изначальный массив: [${array.join(', ')}]\nНовый массив: [${swappedArray.join(', ')}]`;
+            document.body.appendChild(resultParagraph);
+        }
+
+        var inputArray = [5, 2, 1, 3, 7, 8, 4, 6];
+        swapMinMax(inputArray);
+    </script>
+</body>
+</html>
