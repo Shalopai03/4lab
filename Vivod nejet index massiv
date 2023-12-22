@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function printEvenOddElements(array) {
+            var evenNumber = array.filter((_, index) => index % 2 === 0);
+            var oddNumber = array.filter((_, index) => index % 2 !== 0);
+
+            var resultParagraph = document.createElement('p');
+            resultParagraph.innerHTML = `Нечетные числа индекса: ${evenNumber.join(', ')}<br>Четные числа индекса: ${oddNumber.join(', ')}`;
+            document.body.appendChild(resultParagraph);
+        }
+
+        var inputArray = [1, 4, 9, 6, 8, 2, 5, 3];
+        printEvenOddElements(inputArray);
+    </script>
+</body>
+</html>
